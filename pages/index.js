@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <meta name="description" content="A clone of google" />
       </Head>
 
-      <h1 className="text-2xl">Hey there</h1>
+      <Header />
     </div>
   );
 }
