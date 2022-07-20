@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { getProviders, signIn } from "next-auth/react";
 import Image from "next/image";
 
@@ -69,11 +70,13 @@ export default function Home({ providers }) {
           </div>
         </div>
 
-        <div className="flex gap-3 mt-8  ">
+        <div className="flex gap-3 mt-8">
           <button className="btn">Google Search</button>
           <button className="btn">I'm Feeling Lucky</button>
         </div>
       </form>
+
+      <Footer />
     </div>
   );
 }
