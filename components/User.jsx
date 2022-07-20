@@ -20,7 +20,7 @@ export default function User({ signIn }) {
   return (
     <button
       onClick={signIn}
-      className="bg-blue-500 text-white font-medium px-6 py-2 rounded-md shadow-sm hover:shadow-md hover:brightness-105"
+      className="bg-blue-500 text-white font-medium px-6 py-2 rounded-md shadow-sm hover:shadow-md hover:brightness-105 focus:brightness-125"
     >
       Sign in
     </button>

@@ -12,15 +12,11 @@ export default function Home({ providers }) {
         <meta name="description" content="A clone of google" />
       </Head>
 
-      {Object.values(providers).map((provider) => (
-        <Header
-          key={provider.name}
-          providers={providers}
-          signIn={() => {
-            signIn(provider.id, { callbackUrl: "/" });
-          }}
-        />
-      ))}
+      <Header
+        signIn={() => {
+          signIn(providers.google.id, { callbackUrl: "/" });
+        }}
+      />
 
       <form className="flex flex-col items-center mt-52">
         <Image
@@ -40,11 +36,11 @@ export default function Home({ providers }) {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
@@ -59,11 +55,11 @@ export default function Home({ providers }) {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
               />
             </svg>
