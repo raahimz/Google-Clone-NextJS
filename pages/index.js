@@ -3,8 +3,21 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { getProviders, signIn } from "next-auth/react";
 import Image from "next/image";
+import Router from "next/router";
+import { useState } from "react";
 
 export default function Home({ providers }) {
+  const [userInput, setUserInput] = useState("");
+
+  const router = Router.useRouter();
+
+  const search = (e) => {
+    e.preventDefault();
+
+    const term = userInput.trim();
+    router.push(`/search?term=${term}`);
+  };
+
   return (
     <div>
       <Head>
@@ -46,7 +59,12 @@ export default function Home({ providers }) {
             </svg>
           </div>
 
-          <input type="text" className="flex-grow focus:outline-none" />
+          <input
+            type="text"
+            className="flex-grow focus:outline-none"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+          />
 
           <div className="text-blue-500">
             <svg
@@ -67,7 +85,9 @@ export default function Home({ providers }) {
         </div>
 
         <div className="flex gap-3 mt-8">
-          <button className="btn">Google Search</button>
+          <button className="btn" onClick={search}>
+            Google Search
+          </button>
           <button className="btn">I'm Feeling Lucky</button>
         </div>
       </form>
