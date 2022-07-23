@@ -17,7 +17,7 @@ export default function Home({ providers }) {
     if (searchInput) {
       const term = searchInput.trim();
       if (term === "") return;
-      router.push(`/search?term=${term}`);
+      router.push(`/search?term=${term}&searchType=`);
     }
   };
 
