@@ -28,6 +28,7 @@ export default function SearchHeader({ providers }) {
       <div className="flex items-center justify-between gap-4 px-2 sm:px-8 pt-6">
         <form className="flex items-center gap-5 sm:gap-10">
           <Image
+            priority={true}
             className="cursor-pointer"
             onClick={() => router.push("/")}
             src={
@@ -53,15 +54,15 @@ export default function SearchHeader({ providers }) {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
@@ -92,15 +93,15 @@ export default function SearchHeader({ providers }) {
             <button className="text-blue-500" onClick={search}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
