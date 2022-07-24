@@ -1,4 +1,4 @@
-import User from "./User";
+import User from "../Utils/User";
 
 export default function Header({ signIn }) {
   return (

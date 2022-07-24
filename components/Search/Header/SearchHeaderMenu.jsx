@@ -68,7 +68,7 @@ export default function SearchHeaderMenu() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-row gap-6 pt-6 border-b  sm:pl-[11rem] pl-[1.5rem]">
+    <div className="flex flex-row gap-6 pt-6 border-b  md:pl-[11rem] pl-[1.5rem]">
       <MenuButton
         title="All"
         icon={<IconAll />}

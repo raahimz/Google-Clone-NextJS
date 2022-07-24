@@ -1,15 +1,20 @@
 import Head from "next/head";
-import SearchHeader from "../components/SearchHeader";
+import SearchHeader from "../components/Search/Header/SearchHeader";
+import SearchResults from "../components/Search/Results/SearchResults";
 import MockData from "../MockData";
+import { useRouter } from "next/router";
 
 export default function Search({ results }) {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
-        <title>fasdfs - Googly Search</title>
+        <title>{router.query.term} - Googly Search</title>
       </Head>
 
       <SearchHeader />
+      <SearchResults results={results} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import User from "./User";
+import User from "../../Utils/User";
 import { getProviders, signIn } from "next-auth/react";
 import SearchHeaderMenu from "./SearchHeaderMenu";
 
@@ -25,7 +25,7 @@ export default function SearchHeader({ providers }) {
 
   return (
     <header className="sticky top-0 bg-white">
-      <div className="flex items-center justify-between gap-4 px-2 sm:px-8 pt-6">
+      <div className="flex items-center justify-between gap-4 px-6 sm:px-8 pt-6">
         <form className="flex items-center gap-5 sm:gap-10">
           <Image
             priority={true}
@@ -39,7 +39,7 @@ export default function SearchHeader({ providers }) {
             layout="fixed"
             objectFit="contain"
           />
-          <div className="flex flex-row lg:w-[700px] md:w-[500px] sm:w-[400px] items-center border rounded-full px-2 sm:px-4 py-2 gap-3 hover:shadow-md focus-within:shadow-md">
+          <div className="flex flex-row lg:w-[700px] md:w-[500px] sm:w-[400px] items-center border rounded-full px-2 sm:px-4 py-2 gap-3 shadow-md hover:shadow-lg focus-within:shadow-lg">
             <input
               type="text"
               className="flex-grow focus:outline-none"
