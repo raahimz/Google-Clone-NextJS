@@ -29,7 +29,7 @@ export async function getServerSideProps(context) {
           process.env.API_KEY
         }&cx=${process.env.CONTEXT_KEY}&q=${context.query.term}${
           context.query.searchType && "&searchType=image"
-        }`
+        }&start=${context.query.startIndex || "1"}`
       ).then((response) => response.json());
 
   return {

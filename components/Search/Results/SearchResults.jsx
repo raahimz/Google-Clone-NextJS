@@ -1,4 +1,5 @@
 import parse from "html-react-parser";
+import PaginationButtons from "./PaginationButtons";
 
 export default function SearchResults({ results }) {
   return (
@@ -9,7 +10,7 @@ export default function SearchResults({ results }) {
       </p>
       <div className="mt-6 flex flex-col gap-8">
         {results.items.map((result) => (
-          <div>
+          <div key={result.link}>
             <a href={result.link} className="group">
               <p className="text-sm text-gray-900 truncate">
                 {result.formattedUrl}
@@ -22,6 +23,7 @@ export default function SearchResults({ results }) {
           </div>
         ))}
       </div>
+      <PaginationButtons />
     </div>
   );
 }
